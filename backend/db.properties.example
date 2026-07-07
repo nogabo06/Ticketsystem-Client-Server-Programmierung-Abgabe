@@ -1,0 +1,14 @@
+# Vorlage fuer die lokale Datenbank-Konfiguration.
+#
+# 1. Diese Datei nach "db.properties" kopieren (im backend/-Ordner).
+# 2. db.password mit dem AKTUELLEN Supabase-Passwort ausfuellen.
+#
+# "db.properties" steht in .gitignore und wird NICHT eingecheckt.
+#
+# Alternativ (z.B. auf einem Server) statt der Datei die Environment-Variablen
+# setzen -- diese haben Vorrang vor der Datei:
+#   DB_URL, DB_USER, DB_PASSWORD
+
+db.url=jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres
+db.user=postgres.gfzaxayksnqfrheizxox
+db.password=DEIN_SUPABASE_PASSWORT

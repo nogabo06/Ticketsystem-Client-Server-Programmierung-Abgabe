@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
+
+    <persistence-unit name="ticketsystem">
+        <!-- Übergeben der Modelklassen für ddl-mode 'update' -->
+        <class>de.hwr.ticketsystem.model.Role</class>
+        <class>de.hwr.ticketsystem.model.UserAccount</class>
+        <class>de.hwr.ticketsystem.model.TicketCategory</class>
+        <class>de.hwr.ticketsystem.model.TicketPriority</class>
+        <class>de.hwr.ticketsystem.model.TicketStatus</class>
+        <class>de.hwr.ticketsystem.model.Ticket</class>
+        <class>de.hwr.ticketsystem.model.TicketComment</class>
+        <class>de.hwr.ticketsystem.model.TicketAssignmentHistory</class>
+
+        <properties>
+            <!-- Verbindungsdaten (URL/User/Passwort) werden zur Laufzeit aus der
+                 Umgebung gesetzt (siehe DatabaseConnection) und stehen bewusst
+                 NICHT hier im eingecheckten Code. -->
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="org.postgresql.Driver"/>
+
+            <!-- Hibernate-Einstellungen -->
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+            <property name="hibernate.show_sql"
+                      value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
